@@ -1,6 +1,7 @@
 'use strict';
 
 const bodyParser = require('body-parser');
+const boom = require('Boom');
 const cors = require('cors');
 const express = require('express');
 const http = require('http');
@@ -20,7 +21,7 @@ app.use(async (req, res, next) => {
   jwt.verify(token, config.secret, (err, decoded) => {
     if (err) {
       // console.log(err);
-      return next(err);
+      return next(boom.unauthorized());
     }
     // console.log('Decoded', decoded);
     next();
