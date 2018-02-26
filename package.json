@@ -1,0 +1,36 @@
+{
+  "name": "micro-app",
+  "version": "1.0.0",
+  "description": "App to communicate with authentication microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivekimsit/micro-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivekimsit/micro-app/issues"
+  },
+  "homepage": "https://github.com/vivekimsit/micro-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "joi": "^13.1.2",
+    "jsonwebtoken": "^8.1.1"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.0",
+    "es6-promisify": "^6.0.0",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "nodemon": "^1.15.1"
+  }
+}
