@@ -12,6 +12,10 @@ const schema = joi
     DB_NAME: joi.string().required(),
     DB_PASSWORD: joi.string().allow(''),
     DB_DEBUG: joi.boolean().default(false),
+    NODE_ENV: joi
+      .string()
+      .allow(['development', 'production', 'test'])
+      .default('development'),
     DB_CLIENT: joi
       .string()
       .allow(['mysql', 'sqlite3'])

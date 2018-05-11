@@ -9,6 +9,10 @@ const schema = joi
       .integer()
       .min(0)
       .max(65535),
+   NODE_ENV: joi
+    .string()
+    .allow(['development', 'production', 'test'])
+    .default('development'),
     SECRET: joi.string().required(),
   })
   .unknown()
@@ -17,6 +21,7 @@ const schema = joi
 const envVars = joi.attempt(process.env, schema);
 
 module.exports = {
+  env: envVars.NODE_ENV,
   port: envVars.PORT,
   secret: envVars.SECRET,
 };
