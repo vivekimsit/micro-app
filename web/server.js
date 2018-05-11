@@ -1,5 +1,3 @@
-'use strict';
-
 const bodyParser = require('body-parser');
 const boom = require('Boom');
 const cors = require('cors');
@@ -30,6 +28,6 @@ app.use(async (req, res, next) => {
     next();
   });
 });
-app.use(routes);
+app.use('/api/v1/', routes);
 
-module.exports = http.createServer(app)
+module.exports = http.createServer(app);

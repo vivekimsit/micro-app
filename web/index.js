@@ -8,11 +8,11 @@ const config = require('./config');
 process.on('SIGTERM', async () => {
   const exitCode = await stop();
   process.exit(exitCode);
-})
+});
 
 // do not init the process if a crucial component can not start up
 const initServer = promisify(server.listen.bind(server));
-async function init () {
+async function init() {
   try {
     await initServer(config.port);
   } catch (err) {
@@ -23,7 +23,7 @@ async function init () {
 }
 
 const closeServer = promisify(server.close.bind(server));
-async function stop () {
+async function stop() {
   let exitCode = 0;
   try {
     await closeServer();
@@ -36,5 +36,5 @@ async function stop () {
 
 module.exports = {
   init,
-  stop
-}
+  stop,
+};
