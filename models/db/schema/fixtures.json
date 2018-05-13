@@ -1,23 +1,6 @@
 {
     "models": [
       {
-        "name": "Hotel",
-        "entries": [
-          {
-            "uid": "1",
-            "name": "demo",
-            "slug": "demo-app",
-            "status": "enabled"
-          },
-          {
-            "uid": "2",
-            "name": "bar",
-            "slug": "bar-app",
-            "status": "enabled"
-          }
-        ]
-      },
-      {
         "name": "Merchant",
         "entries": [
           {
@@ -27,6 +10,25 @@
           {
             "uid": "2",
             "user_uid": "2"
+          }
+        ]
+      },
+      {
+        "name": "Hotel",
+        "entries": [
+          {
+            "uid": "1",
+            "name": "demo",
+            "merchant_uid": "1",
+            "slug": "demo-app",
+            "status": "enabled"
+          },
+          {
+            "uid": "2",
+            "name": "bar",
+            "merchant_uid": "1",
+            "slug": "bar-app",
+            "status": "enabled"
           }
         ]
       }

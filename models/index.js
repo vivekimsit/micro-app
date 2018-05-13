@@ -1,4 +1,4 @@
-['booking'].forEach(module => {
+['booking', 'hotel', 'merchant'].forEach(module => {
   Object.assign(exports, require(`./${module}`));
 });
 

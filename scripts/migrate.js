@@ -8,10 +8,11 @@ knexMigrator.isDatabaseOK()
   .then(function() {
     console.log('Database is OK');
   })
-  .catch(function(err) {
+  .catch(async function(err) {
     if (err.code === 'DB_NOT_INITIALISED') {
       // database is not initialised?
-      knexMigrator.init();
+      await knexMigrator.init();
+      process.exit();
     } else {
       // database is not migrated?
       knexMigrator.migrate();
