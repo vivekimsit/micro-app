@@ -9,10 +9,10 @@ const schema = joi
       .integer()
       .min(0)
       .max(65535),
-   NODE_ENV: joi
-    .string()
-    .allow(['development', 'production', 'test'])
-    .default('development'),
+    NODE_ENV: joi
+      .string()
+      .allow(['development', 'production', 'test'])
+      .default('development'),
     SECRET: joi.string().required(),
   })
   .unknown()

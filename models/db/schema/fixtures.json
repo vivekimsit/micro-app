@@ -1,0 +1,35 @@
+{
+    "models": [
+      {
+        "name": "Hotel",
+        "entries": [
+          {
+            "uid": "1",
+            "name": "demo",
+            "slug": "demo-app",
+            "status": "enabled"
+          },
+          {
+            "uid": "2",
+            "name": "bar",
+            "slug": "bar-app",
+            "status": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "Merchant",
+        "entries": [
+          {
+            "uid": "1",
+            "user_uid": "1"
+          },
+          {
+            "uid": "2",
+            "user_uid": "2"
+          }
+        ]
+      }
+    ]
+}
+
