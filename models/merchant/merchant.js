@@ -16,9 +16,7 @@ const Merchant = Base.Model.extend({
   tableName: 'merchants',
 
   defaults: function defaults() {
-    return {
-      uid: uuidv4(),
-    };
+    return { uid: uuidv4() };
   },
 });
 

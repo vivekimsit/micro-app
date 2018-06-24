@@ -15,9 +15,7 @@ const Booking = Base.Model.extend({
   tableName: 'bookings',
 
   defaults: function defaults() {
-    return {
-      uid: uuidv4(),
-    };
+    return { uid: uuidv4() };
   },
 
   onCreating: function onCreating(newObj, attr, options) {

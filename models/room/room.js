@@ -3,9 +3,6 @@ const uuidv4 = require('uuid/v4');
 
 const Base = require('../base');
 
-require('../merchant');
-
-// TODO(vpoddar): Add schema
 const schema = joi
   .object({
     uid: joi.string().required(),
@@ -13,18 +10,19 @@ const schema = joi
   .unknown()
   .required();
 
-const Hotel = Base.Model.extend({
-  tableName: 'hotels',
+const Room = Base.Model.extend({
+  tableName: 'rooms',
 
   defaults: function defaults() {
     return { uid: uuidv4() };
   },
 
-  merchant: function() {
-    return this.belongsTo('Merchant');
+  onCreating: function onCreating(newObj, attr, options) {
+    Base.Model.prototype.onCreating.apply(this, arguments);
+    joi.attempt(this.changed, schema);
   },
 });
 
 module.exports = {
-  Hotel: Base.model('Hotel', Hotel),
+  Room: Base.model('Room', Room),
 };
