@@ -1,17 +1,21 @@
 const knex = require('knex');
 const config = require('./config');
-const connection = knex(config);
+
+let connection = knex(config);
 
 async function init() {
   return Promise.resolve(connection);
 }
 
 async function close() {
-  return connection.destroy();
+  if (connection) {
+    await connection.destroy();
+    connection = undefined;
+  }
 }
 
 module.exports = {
+  close,
   connection,
   init,
-  close,
 };

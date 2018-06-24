@@ -12,6 +12,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+
 app.use(async (req, res, next) => {
   if (!req.headers['authorization']) {
     console.log('Authorization header is missing');
