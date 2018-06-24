@@ -3,6 +3,7 @@ const uuidv4 = require('uuid/v4');
 
 const Base = require('../base');
 
+require('./address');
 require('../merchant');
 
 // TODO(vpoddar): Add schema
@@ -23,6 +24,14 @@ const Hotel = Base.Model.extend({
   merchant: function() {
     return this.belongsTo('Merchant');
   },
+
+  rooms: function() {
+    return this.hasMany('Room');
+  },
+
+  address: function() {
+    return this.hasMany('Address');
+  }
 });
 
 module.exports = {
