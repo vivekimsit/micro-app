@@ -1,3 +1,5 @@
+'use strict';
+
 const { promisify } = require('es6-promisify');
 
 const config = require('./config');

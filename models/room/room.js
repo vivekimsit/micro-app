@@ -11,7 +11,7 @@ const schema = joi
   .required();
 
 const Room = Base.Model.extend({
-  tableName: 'rooms',
+  tableName: 'room',
 
   defaults: function defaults() {
     return { uid: uuidv4() };
