@@ -7,7 +7,7 @@ const express = require('express');
 const http = require('http');
 
 const routes = require('./routes');
-const errorHandler = require('./middleware/errorHandler');
+const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 

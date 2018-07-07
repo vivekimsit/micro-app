@@ -7,7 +7,7 @@ require('../booking');
 require('../merchant');
 
 const schema = {
-  create = joi
+  create: joi
     .object({
       uid: joi.string().required(),
       name: joi.string().required(),
@@ -18,16 +18,6 @@ const schema = {
     })
     .unknown()
 };
-const schema = joi
-  .object({
-    uid: joi.string().required(),
-    name: joi.string().required(),
-    logo: joi.string().required(),
-    description: joi.string(),
-    status: joi.string().required().default('active'),
-    merchant_uid: joi.string().required(),
-  })
-  .unknown();
 
 const Hotel = Base.Model.extend({
   tableName: 'hotel',

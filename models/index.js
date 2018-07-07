@@ -1,4 +1,5 @@
 [
+  'address',
   'booking',
   'hotel',
   'merchant',

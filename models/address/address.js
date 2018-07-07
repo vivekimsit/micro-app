@@ -13,5 +13,5 @@ const Address = Base.Model.extend({
 });
 
 module.exports = {
-  Address: Base.model('Address', Address);
+  Address: Base.model('Address', Address)
 };
